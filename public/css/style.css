@@ -9,3 +9,24 @@
 .ui.accordion {
     margin-top: 3em;
 }
+
+.precio {
+    text-align: center;
+    font-weight: bold;
+}
+
+div.image {
+    text-align: center;
+}
+
+.ui.card div.content {
+    padding: 0;
+}
+
+.ui.card div.content .header, .ui.card div.content .meta {
+    padding: 0em 1em;
+}
+
+.ui.card div.content .header {
+    padding-top: .5em;
+}
