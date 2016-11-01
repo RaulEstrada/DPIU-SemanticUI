@@ -48,6 +48,9 @@
                 $('.ui.accordion').accordion({exclusive: false});
                 $('.ui.sticky').sticky({context: '#cuerpo'});
                 $('.tabular.menu .item').tab();
+                $('div.image').mouseenter(function() {
+                    $('div.ui.small.image').transition('jiggle');
+                })
             });
         </script>
     </head>
@@ -203,13 +206,73 @@
                             <div class="description">
                                 <div class="ui top attached tabular menu">
                                     <a class="item active" data-tab="first">Info</a>
-                                    <a class="item" data-tab="second">Comentarios</a>
+                                    <a class="item" data-tab="second">Top 5 Comentarios</a>
                                 </div>
                                 <div class="ui bottom attached tab segment active" data-tab="first">
                                     Riley es una chica que disfruta o padece toda clase de sentimientos. Aunque su vida ha estado marcada por la Alegría, también se ve afectada por otro tipo de emociones.
                                 </div>
                                 <div class="ui bottom attached tab segment" data-tab="second">
-                                    Second
+                                    <div class="ui comments">
+                                        <h3 class="ui dividing header">Comentarios</h3>
+                                        <div class="comment">
+                                            <a class="avatar">
+                                                <img src="public/images/avatar1.jpg">
+                                            </a>
+                                            <div class="content">
+                                                <a class="author">Pedro López</a>
+                                                <div class="metadata">
+                                                    <span class="date">1/11/2016 16:45</span>
+                                                </div>
+                                                <div class="text">
+                                                    Muy buena película para niños y adultos
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment">
+                                            <a class="avatar">
+                                                <img src="public/images/avatar2.jpg">
+                                            </a>
+                                            <div class="content">
+                                                <a class="author">Matías Gut.</a>
+                                                <div class="metadata">
+                                                    <span class="date">31/10/2016 21:45</span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>Muy buen precio</p>
+                                                </div>
+                                            </div>
+                                            <div class="comments">
+                                                <div class="comment">
+                                                    <a class="avatar">
+                                                        <img src="public/images/avatar3.jpg">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a class="author">María Fernand.</a>
+                                                        <div class="metadata">
+                                                            <span class="date">31/10/2016 22:10</span>
+                                                        </div>
+                                                        <div class="text">
+                                                            Estoy de acuerdo
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment">
+                                            <a class="avatar">
+                                              <img src="public/images/avatar4.jpg">
+                                            </a>
+                                            <div class="content">
+                                                <a class="author">David Hern.</a>
+                                                <div class="metadata">
+                                                    <span class="date">10/08/2016</span>
+                                                </div>
+                                                <div class="text">
+                                                    ¿Va a salir en Blu Ray?
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
