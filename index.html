@@ -18,6 +18,10 @@
         <link rel="stylesheet" href="semantic/dist/components/checkbox.min.css"/>
         <script src="semantic/dist/components/checkbox.min.js"></script>
         <link rel="stylesheet" href="semantic/dist/components/input.min.css"/>
+        <script src="semantic/dist/components/accordion.min.js"></script>
+        <link rel="stylesheet" href="semantic/dist/components/accordion.min.css"/>
+        <script src="semantic/dist/components/sticky.min.js"></script>
+        <link rel="stylesheet" href="semantic/dist/components/sticky.min.css"/>
         <link rel="stylesheet" href="public/css/style.css"/>
         <script>
             $(document).ready(function() {
@@ -37,12 +41,9 @@
                         }
                     }
                 });
-                $('.dropdown')
-  .dropdown({
-    // you can use any ui transition
-    transition: 'drop'
-  })
-;
+                $('.dropdown').dropdown({transition: 'drop'});
+                $('.ui.accordion').accordion({exclusive: false});
+                $('.ui.sticky').sticky({context: '#cuerpo'});
             });
         </script>
     </head>
@@ -95,7 +96,7 @@
             <div class="divider"> / </div>
         </div>
         
-        <div class="main ui stackable two column divided grid horizontal segments">
+        <div id="cuerpo" class="main ui stackable two column divided grid horizontal segments">
                 <div class="four wide column segment">
                     <h2 class="ui top header">
                         Buscar
@@ -157,6 +158,31 @@
                         </div>
                         <button type="submit" class="ui primary button" tabindex="0">Buscar</button>
                     </form>
+                    <div class="ui styled accordion">
+                        <div class="active title">
+                            <i class="dropdown icon"></i>
+                            ¿Qué es E-Commerce?
+                        </div>
+                        <div class="active content">
+                            <p>Según Wikipedia, E-Commerce consiste en la compra y venta de productos o de servicios a través de medios electrónicos, tales como Internet y otras redes informáticas</p>
+                        </div>
+                        <div class="title">
+                            <i class="dropdown icon"></i>
+                            ¿Cómo puedo buscar artículos On-Line?
+                        </div>
+                        <div class="content">
+                            <p>Para buscar artículos pueden usar el cuadro de búsqueda en la parte izquierda de la pantalla, o ir navegando por los distintos departamentos de la tienda haciendo uso 
+                            del apartado "Departamentos" del menú superior</p>
+                        </div>
+                        <div class="title">
+                            <i class="dropdown icon"></i>
+                            ¿Qué medios de pago soportáis?
+                        </div>
+                        <div class="content">
+                            <p>Si la compra se realiza en un establecimiento, se puede pagar en efectivo o con tarjeta de crédito. Para compras On-Line se pueden usar 
+                            tarjetas de crédito, de débito o PayPal.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="twelve wide column segment"></div>
         </div>
