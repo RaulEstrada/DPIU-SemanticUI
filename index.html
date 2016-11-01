@@ -48,10 +48,10 @@
                 $('.dropdown').dropdown({transition: 'drop'});
                 $('.ui.accordion').accordion({exclusive: false});
                 $('.ui.sticky').sticky({context: '#cuerpo'});
-                $('.tabular.menu .item').tab();
+                $('.ui.fluid.card .tabular.menu .item').tab({context: 'parent'});
                 $('div.image').mouseenter(function() {
-                    $('div.ui.small.image').transition('jiggle');
-                })
+                    $(this).find('img').transition('jiggle');
+                });
             });
         </script>
     </head>
@@ -193,100 +193,176 @@
                     </div>
                 </div>
             <div class="twelve wide column segment">
-                    <div class="ui card">
-                        <a class="ui left corner teal label">
-                            <i class="heart icon"></i>
-                        </a>
-                        <div class="image">
-                            <div class="ui small image">
-                                <img src="public/images/insideoutdvd.jpg">
-                            </div>
-                        </div>                
-                        <div class="content">
-                            <span class="header">Del Revés (DVD)</span>
-                            <div class="meta">
-                                <span class="date">Publicado el 15/08/2016</span>
-                            </div>
-                            <div class="description">
-                                <div class="ui top attached tabular menu">
-                                    <a class="item active" data-tab="first">Info</a>
-                                    <a class="item" data-tab="second">Top 5 Comentarios</a>
-                                </div>
-                                <div class="ui bottom attached tab segment active" data-tab="first">
-                                    Riley es una chica que disfruta o padece toda clase de sentimientos. Aunque su vida ha estado marcada por la Alegría, también se ve afectada por otro tipo de emociones.
-                                </div>
-                                <div class="ui bottom attached tab segment" data-tab="second">
-                                    <div class="ui comments">
-                                        <h3 class="ui dividing header">Comentarios</h3>
-                                        <div class="comment">
-                                            <a class="avatar">
-                                                <img src="public/images/avatar1.jpg">
-                                            </a>
-                                            <div class="content">
-                                                <a class="author">Pedro López</a>
-                                                <div class="metadata">
-                                                    <span class="date">1/11/2016 16:45</span>
-                                                </div>
-                                                <div class="text">
-                                                    Muy buena película para niños y adultos
-                                                </div>
-                                            </div>
+                <div class="ui two column stackable grid container">
+                    <div class="column">
+                        <div class="ui segment">
+                            <div id="1" class="ui fluid card">
+                                <a class="ui left corner teal label">
+                                    <i class="heart icon"></i>
+                                </a>
+                                <div class="image">
+                                    <div class="ui small image">
+                                        <img src="public/images/insideoutdvd.jpg">
+                                    </div>
+                                </div>                
+                                <div class="content">
+                                    <span class="header">Del Revés (DVD)</span>
+                                    <div class="meta">
+                                        <span class="date">Publicado el 15/08/2016</span>
+                                    </div>
+                                    <div class="description">
+                                        <div class="ui top attached tabular menu">
+                                            <a class="item active" data-tab="first-1">Info</a>
+                                            <a class="item" data-tab="second-1">Top 5 Comentarios</a>
                                         </div>
-                                        <div class="comment">
-                                            <a class="avatar">
-                                                <img src="public/images/avatar2.jpg">
-                                            </a>
-                                            <div class="content">
-                                                <a class="author">Matías Gut.</a>
-                                                <div class="metadata">
-                                                    <span class="date">31/10/2016 21:45</span>
-                                                </div>
-                                                <div class="text">
-                                                    <p>Muy buen precio</p>
-                                                </div>
-                                            </div>
-                                            <div class="comments">
+                                        <div class="ui bottom attached tab segment active" data-tab="first-1">
+                                            Riley es una chica que disfruta o padece toda clase de sentimientos. Aunque su vida ha estado marcada por la Alegría, también se ve afectada por otro tipo de emociones.
+                                        </div>
+                                        <div class="ui bottom attached tab segment" data-tab="second-1">
+                                            <div class="ui comments">
+                                                <h3 class="ui dividing header">Comentarios</h3>
                                                 <div class="comment">
                                                     <a class="avatar">
-                                                        <img src="public/images/avatar3.jpg">
+                                                        <img src="public/images/avatar1.jpg">
                                                     </a>
                                                     <div class="content">
-                                                        <a class="author">María Fernand.</a>
+                                                        <a class="author">Pedro López</a>
                                                         <div class="metadata">
-                                                            <span class="date">31/10/2016 22:10</span>
+                                                            <span class="date">1/11/2016 16:45</span>
                                                         </div>
                                                         <div class="text">
-                                                            Estoy de acuerdo
+                                                            Muy buena película para niños y adultos
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="comment">
+                                                    <a class="avatar">
+                                                        <img src="public/images/avatar2.jpg">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a class="author">Matías Gut.</a>
+                                                        <div class="metadata">
+                                                            <span class="date">31/10/2016 21:45</span>
+                                                        </div>
+                                                        <div class="text">
+                                                            <p>Muy buen precio</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comments">
+                                                        <div class="comment">
+                                                            <a class="avatar">
+                                                                <img src="public/images/avatar3.jpg">
+                                                            </a>
+                                                            <div class="content">
+                                                                <a class="author">María Fernand.</a>
+                                                                <div class="metadata">
+                                                                    <span class="date">31/10/2016 22:10</span>
+                                                                </div>
+                                                                <div class="text">
+                                                                    Estoy de acuerdo
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="comment">
+                                                    <a class="avatar">
+                                                      <img src="public/images/avatar4.jpg">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a class="author">David Hern.</a>
+                                                        <div class="metadata">
+                                                            <span class="date">10/08/2016</span>
+                                                        </div>
+                                                        <div class="text">
+                                                            ¿Va a salir en Blu Ray?
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="comment">
-                                            <a class="avatar">
-                                              <img src="public/images/avatar4.jpg">
-                                            </a>
-                                            <div class="content">
-                                                <a class="author">David Hern.</a>
-                                                <div class="metadata">
-                                                    <span class="date">10/08/2016</span>
-                                                </div>
-                                                <div class="text">
-                                                    ¿Va a salir en Blu Ray?
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <p class="precio">
+                                        9.99€
+                                        <span class="ui red tag label">OFERTA</span>
+                                    </p>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui segment">
+                            <div id="2" class="ui fluid card">
+                                <a class="ui left corner teal label">
+                                    <i class="heart icon"></i>
+                                </a>
+                                <div class="image">
+                                    <div class="ui small image">
+                                        <img src="public/images/harrypotter.jpg">
+                                    </div>
+                                </div>                
+                                <div class="content">
+                                    <span class="header">Harry Potter y el Legado Maldito (Libro)</span>
+                                    <div class="meta">
+                                        <span class="date">Publicado el 1/11/2016</span>
+                                    </div>
+                                    <div class="description">
+                                        <div class="ui top attached tabular menu">
+                                            <a class="item active" data-tab="first-2">Info</a>
+                                            <a class="item" data-tab="second-2">Top 5 Comentarios</a>
+                                        </div>
+                                        <div class="ui bottom attached tab segment active" data-tab="first-2">
+                                            Mientras Harry se enfrenta con un pasado que se niega a permanecer donde pertenece, su hijo menor Albus debe luchar con el peso de una herencia familiar que nunca quiso. 
+                                        </div>
+                                        <div class="ui bottom attached tab segment" data-tab="second-2">
+                                            <div class="ui comments">
+                                                <h3 class="ui dividing header">Comentarios</h3>
+                                                <div class="comment">
+                                                    <a class="avatar">
+                                                        <img src="public/images/avatar3.jpg">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a class="author">Marta Gutierr.</a>
+                                                        <div class="metadata">
+                                                            <span class="date">1/11/2016 16:45</span>
+                                                        </div>
+                                                        <div class="text">
+                                                            Con muchas ganas de leerlo.
+                                                        </div>
+                                                        <div class="comments">
+                                                            <div class="comment">
+                                                                <a class="avatar">
+                                                                    <img src="public/images/avatar1.jpg">
+                                                                </a>
+                                                                <div class="content">
+                                                                    <a class="author">Juan Delgado.</a>
+                                                                    <div class="metadata">
+                                                                        <span class="date">1/11/2016 22:10</span>
+                                                                    </div>
+                                                                    <div class="text">
+                                                                        Pues yo creo que no deberían haber sacado más contenido. La saga tuvo su final.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <p class="precio">
-                                9.99€
-                                <span class="ui red tag label">OFERTA</span>
-                            </p>
+                                <div class="extra content">
+                                    <p class="precio">
+                                        29.99€
+                                        <span class="ui teal tag label">NUEVO</span>
+                                    </p>
+                                </div>
+                            </div>  
                         </div>
                     </div>
+                </div>
             </div>
         </div>
         

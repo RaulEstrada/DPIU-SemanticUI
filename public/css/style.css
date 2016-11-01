@@ -30,3 +30,7 @@ div.image {
 .ui.card div.content .header {
     padding-top: .5em;
 }
+
+.ui.small.image img {
+    max-height: 150px;
+}
